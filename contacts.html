@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer>
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();  // Prevents form from submitting normally
+      const name = document.getElementById("nameInput").value.trim();
+      const message = document.getElementById("messageInput").value.trim();
+    
+      if (name === "" || message === "") {
+        alert("Please fill out all fields.");
+      } else {
+        document.getElementById("response").innerText = `Thanks, ${name}. We'll get back to you soon!`;
+        // Optional: reset form after submission
+        e.target.reset();
+      }
+    });
+    
+  </script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <button id="themeToggle">Switch Theme</button>
+    </ul>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="hero-banner">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+  </header>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form">
+    <form action="#" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required placeholder="Subject of your message">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required placeholder="Your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>

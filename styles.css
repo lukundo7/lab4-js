@@ -1,0 +1,316 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: rgb(207, 219, 223);
+    padding: 10px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: black;
+}
+
+/* Hero Banner Styles */
+.hero-banner {
+    background: linear-gradient(to right, rgb(207, 219, 223), #afaeae);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-banner p {
+    font-size: 1.5em;
+}
+
+/* Services Grid Section */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 1em;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input, form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #afaeae;
+    box-shadow: 0 0 5px black;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #afaeae;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #afaeae;
+    transform: translateY(-3px);
+}
+
+/* Flexbox Layout for Home Page */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.intro, .sidebar, .feature {
+    background-color: #ffffff;
+    padding: 20px;
+    flex: 1;
+    margin-right: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+/* Responsive Design with Media Queries */
+
+@media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+    }
+    .intro, .sidebar {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .intro, .sidebar {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+      flex-direction: column;
+    }
+    .intro, .sidebar {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+}
+
+
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Style for the theme toggle button */
+#themeToggle {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 18px;
+    background-color: #afaeae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover effect for the button */
+  #themeToggle:hover {
+    background-color: black;
+  }
+  
+  
+  /* Active effect when the button is clicked */
+  #themeToggle:active {
+    background-color: #afaeae;
+    transform: scale(0.98);
+  }
+  
+
+/* Container for the Team Members section */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style the list of users */
+  #userList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* Style individual list items */
+  #userList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* Hover effect on each list item */
+  #userList li:hover {
+    background-color: #efefef;
+    border-color: #bbb;
+  }
+  
+  /* Style for the 'Load Users' button */
+  #loadUsersBtn {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #afaeae;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  #loadUsersBtn:hover {
+    background-color: #afaeae;
+  }
+  .answer {
+    display: none;
+    }
+    .answer.visible {
+    display: block;
+    }
+/* Style for the theme toggle button */
+#backToTopBtn {
+    background-color: #afaeae;
+    padding: 10px;
+    margin: 0;
+    border-radius: 5px;
+    border: 1px solid #afaeae;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Hover effect for the button */
+  #backToTopBtn:hover {
+    background-color: black;
+  }
+  
+  
+  /* Active effect when the button is clicked */
+  #backToTopBtn:active {
+    background-color: #afaeae;
+    transform: scale(0.98);
+  }
+   
